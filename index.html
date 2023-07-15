@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./main.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <title>MedLife</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <h1 class="title main-title">MedLife</h1>
+            </div>
+        </header>
+
+        <main class="container">
+            <section>
+                <h2 class="section-title"><i class="fa-regular fa-address-card"></i> about us</h2>
+
+                <p class="section-content">
+                    To overcome the prominent limitations of Egyptian pharmacy apps, we propose building a
+                    user-friendly application “MedLife” for selling/purchasing drugs, vitamins, medications,
+                    and other products, but more importantly for making the experience of users better. It
+                    will also facilitate the process of registering pharmacies in any location and becoming
+                    part of the system. Furthermore, MedLife will take the competition to a whole new level by
+                    applying machine learning and deep learning for time series forecasting of drug sales.
+                    That way, our app not only allows pharmacists to track the sales of products, but also
+                    access drug sales predictions geographically. For example, a pharmacy in Cairo can know
+                    which drugs are going to be the most sold drugs in the next month. Also, we offer a
+                    solution for users who 3 might find it difficult to read prescriptions by building an OCR
+                    reader that will read the prescription and tell them the drugs’ names directly.
+                </p>
+            </section>
+
+
+
+            <section>
+                <h2 class="section-title"><i class="fa-solid fa-list-check"></i> implementation</h2>
+
+                <div class="section-content implementation-content">
+                    <div class="card">
+                        <h3 class="card-title">Backend</h3>
+                        <p>
+                            Our system has been constructed using a microservices architecture to ensure exceptional scalability and improved fault tolerance. To align with the underlying business logic, we have categorized each requirement into its corresponding microservice. Additionally, we have leveraged the use of an S3 Bucket for image storage, allowing us to optimize request sizes and guarantee quicker response time. Moreover, effective communication has been established through the utilization of a message broker, enhancing overall system efficiency.
+                        </p>
+                    </div>
+
+                    
+                    <div class="card">
+                        <h3 class="card-title">Machine Learning</h3>
+                        <p>
+                            In the machine learning component, we have developed a Prescription Reader comprising a two-layer pipeline. The initial layer utilizes Google Vision for optical character recognition (OCR), albeit with suboptimal accuracy results. The subsequent layer employs a transformer model (T5) that has been trained on a dataset encompassing 2000 drug names. This enhanced model achieves a notable accuracy rate of 90% and significantly enhances the overall accuracy of the pipeline by 55%, resulting in a final accuracy rate of <b>70%</b>.
+                        </p>
+                    </div>
+
+
+                    <div class="card">
+                        <h3 class="card-title">Mobile-App</h3>
+                        <p>
+                            The mobile application is built using the <b>MVVM</b> (Model-View-ViewModel) architectural pattern, combined with the <b>BLoC</b> (Business Logic Component) state management pattern. Flutter, a cross-platform development framework, was chosen to ensure the app's functionality on multiple platforms. The primary focus of the mobile app is to facilitate interactions between patients and pharmacists.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">Web-App</h3>
+                        <p>
+                            The web application is developed using React.js, a popular JavaScript library renowned for building user interfaces. Its primary role is to efficiently manage administrative tasks, including the handling of admin and subadmin roles, product management within our system, and generating reports
+                            The application adopts Redux as its state management solution, which offers a centralized store for managing and updating application state. This approach ensures a predictable and efficient flow of data and simplifying complex data interactions.
+                        </p>
+                    </div>
+
+
+
+
+                    <div class="card">
+                        <h3 class="card-title special-card">Hosting</h3>
+                        <p>
+                            To ensure the reliable hosting of our application, we have leveraged Amazon EC2 instances. EC2 (Elastic Compute Cloud) provides scalable and flexible virtual servers, allowing us to deploy our application with ease. By utilizing EC2 instances, we can confidently deliver a robust and high-performance application to our users.<br>
+
+                            To optimize the handling of images within our system, we have employed Amazon S3 (Simple Storage Service) as our data store. By utilizing S3 buckets, we have significantly improved request size and response time for image-related operations. This allows our application to efficiently handle image uploads, storage, and retrieval, enhancing the overall user experience.<br>
+                            
+                            To ensure a secure and scalable database solution, we have chosen MongoDB Atlas as our database hosting platform. MongoDB Atlas offers a fully managed cloud database service, allowing us to store and manage our data with ease. By leveraging MongoDB Atlas, we benefit from features such as automated backups, built-in security measures, and horizontal scalability, ensuring the stability and reliability of our database infrastructure.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title"><i class="fa-solid fa-people-group"></i> Team Members</h2>
+
+                <div class="section-content members">
+                    <div class="member card">
+                        <div class="member-avatar">
+                            <img src="./images/fady-emad.jpeg" alt="fady-emad-avatar" />
+                        </div>
+
+                        <div class="member-info">
+                            <h3 class="card-title">Fady Emad</h3>
+
+                            <div class="social-media">
+                                <a class="github" href="https://github.com/fady2019" target="_blank">
+                                    <i class="fa-brands fa-square-github"></i>
+                                </a>
+                                <a
+                                    class="linkedin"
+                                    href="https://www.linkedin.com/in/fady-emad-400b71216/"
+                                    target="_blank"
+                                >
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
+
+                            <p>
+                                Fady is a Full-Stack Software Engineer specializing in MERN development. He
+                                started studying Computers and Artificial Intelligence at Cairo University
+                                since 2019. He built applications and solved many problems resulting in improving
+                                his skills. He is passionate about continuous growth in this field, and always
+                                seeking innovative solutions. Finally, he likes to describe himself as a
+                                self-learneraholic.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="member card">
+                        <div class="member-avatar">
+                            <img src="./images/karim.jpg" alt="fady-emad-avatar" />
+                        </div>
+
+                        <div class="member-info">
+                            <h3 class="card-title">Karim Mostafa</h3>
+
+                            <div class="social-media">
+                                <a class="github" href="https://github.com/KarimAboshamia" target="_blank">
+                                    <i class="fa-brands fa-square-github"></i>
+                                </a>
+                                <a class="linkedin" href="https://www.linkedin.com/in/karimaboshamia/" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
+
+                            <p>
+                                Motivated and dedicated software engineer with experience in building microservice systems and hosting them using cloud solutions, I am adept at developing scalable and maintainable solutions. I possess strong problem-solving skills and a solid foundation in software engineering, system architecture, advanced algorithms, and data structures. Proficient in Java, JavaScript, and C++, I am passionate about leveraging technology to create efficient and innovative solutions. As a team player with excellent communication skills, I thrive in collaborative environments and enjoy working on projects that make a positive impact on society.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="member card">
+                        <div class="member-avatar">
+                            <img src="./images/default-avatar.png" alt="fady-emad-avatar" />
+                        </div>
+
+                        <div class="member-info">
+                            <h3 class="card-title">Fady Shehata</h3>
+
+                            <div class="social-media">
+                                <a class="github" href="https://github.com/FadyShehataa" target="_blank">
+                                    <i class="fa-brands fa-square-github"></i>
+                                </a>
+                                <a class="linkedin" href="#" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
+
+                            <p>
+                                Flutter developer, software engineer with a strong set of skills and practical knowledge. 
+                                creative in my work, and adaptable to different environments and challenges. I am quick 
+                                learner of new skills required for the situation. I wish to be a leader and help others 
+                                progress as well and to be part of something brilliant.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="member card">
+                        <div class="member-avatar">
+                            <img src="./images/default-avatar.png" alt="fady-emad-avatar" />
+                        </div>
+
+                        <div class="member-info">
+                            <h3 class="card-title">Dalia Karem</h3>
+
+                            <div class="social-media">
+                                <a class="github" href="https://github.com/DaliaKarem" target="_blank">
+                                    <i class="fa-brands fa-square-github"></i>
+                                </a>
+                                <a class="linkedin" href="https://www.linkedin.com/in/dalia-karem-a80b62227" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
+
+                            <p>
+                                Dalia is a recent graduate from faculty of Computers and Artificial Intelligence Cairo University computer science department. She built applications using flutter and solved many problems in many programming languages. 
+                                She would like to join a team in a company to share her passion for technology and innovation.
+                                Her objective is to put her knowledge and skills into practice by collaborating with a company that values creativity and encourages professional growth.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="member card">
+                        <div class="member-avatar">
+                            <img src="./images/default-avatar.png" alt="fady-emad-avatar" />
+                        </div>
+
+                        <div class="member-info">
+                            <h3 class="card-title">Basmala Mostafa</h3>
+
+                            <div class="social-media">
+                                <a class="github" href="https://github.com/BasmalaMostafa" target="_blank">
+                                    <i class="fa-brands fa-square-github"></i>
+                                </a>
+                                <a class="linkedin" href="https://www.linkedin.com/in/basmala-mostafa-934702238" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
+
+                            <p>
+                                Basmala is a Mobile App developer specializing in cross platform - flutter development. she is a fresh graduate from Computer Science and Artificial Intelligence at Cairo University. She has a good knowledge in flutter and dealing with State management(background in provider and proffessional in bloc), Google maps, Restful API, Firebase and Unit testing
+                                and she also has a good knowledge at: Object Oriented Programming(OOP), Clean Code, Architecture Design, SOLID Principles and MVVM pattern.
+                                She is a keen learner(always eager to learn & use new technologies) and has worked on projects from scratch to the final product.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
+
+<!---->
